@@ -12,6 +12,7 @@
       --fg:#fff;
       --accent:#ffd400;
       --muted:#cfcfcf;
+      --danger:#ff4d4d;
       --radius:18px;
     }
 
@@ -56,13 +57,16 @@
       gap:14px;
     }
 
-    button{
+    button, a.button-link{
       font-size:24px;
       font-weight:900;
       padding:18px;
       border-radius:var(--radius);
       border:none;
       cursor:pointer;
+      text-align:center;
+      text-decoration:none;
+      display:block;
     }
 
     .speak{
@@ -74,6 +78,12 @@
       background:#222;
       color:#fff;
       border:2px solid #444;
+    }
+
+    .call{
+      background:rgba(255,77,77,.2);
+      color:#fff;
+      border:2px solid var(--danger);
     }
 
     /* Overlay */
@@ -117,7 +127,7 @@
       cursor:pointer;
     }
 
-    button:focus{
+    button:focus, a:focus{
       outline:4px solid var(--accent);
       outline-offset:4px;
     }
@@ -149,12 +159,21 @@
     <p><strong>Öffnungszeiten:</strong> täglich von 7 Uhr bis 22 Uhr.</p>
     <p><strong>Sauna:</strong> Nutzung ab 16 Jahren erlaubt.</p>
     <p><strong>Handtücher:</strong> kostenlos an der Rezeption erhältlich.</p>
-    <p><strong>Hilfe:</strong> Bei Fragen wenden Sie sich bitte an die Rezeption.</p>
+    <p><strong>Hilfe:</strong> Bei Fragen können Sie die Rezeption direkt anrufen.</p>
   </div>
 
   <div class="buttons">
     <button class="speak" id="speakBtn">🔊 Text erneut vorlesen</button>
     <button class="stop" id="stopBtn">⏹️ Vorlesen stoppen</button>
+
+    <!-- 📞 REZEPTION ANRUFEN -->
+    <a
+      href="tel:+4915259028618"
+      class="button-link call"
+      aria-label="Rezeption anrufen"
+    >
+      📞 Rezeption anrufen
+    </a>
   </div>
 </div>
 
